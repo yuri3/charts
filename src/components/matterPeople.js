@@ -70,8 +70,7 @@ const option = {
   legend: {
     type: 'scroll',
     // orient: 'vertical',
-    // bottom: 150,
-    bottom: 0,
+    bottom: 150,
     data: data.legendData,
     selected: data.selected
   },

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import MatterPeople from './components/matterPeople';
 import ReactEcharts from 'echarts-for-react';
+import MatterPeople from './components/matterPeople';
+import MatterPeopleV2 from './components/matterPeopleV2';
 // import './App.css';
 
 class App extends Component {
@@ -14,13 +15,21 @@ class App extends Component {
               // notMerge={true}
               // lazyUpdate={true}
               // theme="theme_name"
-              style={{ height: '600px', width: '100%' }}
+              style={{ height: '700px', width: '100%' }}
               // onChartReady={this.onChartReadyCallback}
               // onEvents={EventsDict}
               // opts={}
             />
           )}
         </MatterPeople>
+        <MatterPeopleV2>
+          {option => (
+            <ReactEcharts
+              option={option}
+              style={{ height: '700px', width: '100%' }}
+            />
+          )}
+        </MatterPeopleV2>
       </div>
     );
   }
