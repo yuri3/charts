@@ -94,7 +94,7 @@ const data = getData(mockDataSource);
 
 const option = {
   title : {
-    // text: '',
+    text: 'Timekeeper Percentage 2',
     // subtext: '',
     x:'center'
   },
@@ -127,7 +127,7 @@ const option = {
 
         },
         color: (params) => {
-          console.log('params', params)
+          // console.log('params', params)
           return params.data.color
         }
       },
@@ -135,7 +135,7 @@ const option = {
   ],
 };
 
-const MatterPeopleV2 = ({ children }) => {
+const TimekeeperPercentageV2 = ({ children }) => {
   return (
     <div>
       {children(option)}
@@ -143,13 +143,13 @@ const MatterPeopleV2 = ({ children }) => {
   )
 };
 
-MatterPeopleV2.defaultProps = {
+TimekeeperPercentageV2.defaultProps = {
   data: [],
 };
 
-MatterPeopleV2.propTypes = {
+TimekeeperPercentageV2.propTypes = {
   data: PropTypes.array,
   render: PropTypes.func,
 };
 
-export default MatterPeopleV2;
+export default TimekeeperPercentageV2;

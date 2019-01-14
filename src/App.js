@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import ReactEcharts from 'echarts-for-react';
-import MatterPeople from './components/matterPeople';
-import MatterPeopleV2 from './components/matterPeopleV2';
+import TimekeeperPercentage from './components/timekeeperPercentage';
+import TimekeeperPercentageV2 from './components/timekeeperPercentageV2';
+import TimekeeperClassificationPercentage from './components/timekeeperClassificationPercentage'
 // import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="app">
-        <MatterPeople>
+        <TimekeeperPercentage>
           {option => (
             <ReactEcharts
               option={option}
@@ -21,15 +22,23 @@ class App extends Component {
               // opts={}
             />
           )}
-        </MatterPeople>
-        <MatterPeopleV2>
+        </TimekeeperPercentage>
+        <TimekeeperPercentageV2>
           {option => (
             <ReactEcharts
               option={option}
               style={{ height: '700px', width: '100%' }}
             />
           )}
-        </MatterPeopleV2>
+        </TimekeeperPercentageV2>
+        <TimekeeperClassificationPercentage>
+          {option => (
+            <ReactEcharts
+              option={option}
+              style={{ height: '700px', width: '100%' }}
+            />
+          )}
+        </TimekeeperClassificationPercentage>
       </div>
     );
   }

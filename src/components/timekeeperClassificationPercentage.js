@@ -4,45 +4,45 @@ import PropTypes from 'prop-types'
 const mockDataSource = [
   {
     id: '1',
-    name: 'Colberg, Andres',
+    name: 'Partner',
     total: 26122,
     color: 'rgb(85,115,185)',
   },
   {
     id: '2',
-    name: 'Cordero, Corinne',
+    name: 'Asscoiate',
     total: 13987,
     color: 'rgb(211,134,80)',
   },
   {
     id: '3',
-    name: 'Estrella, Alberto G',
+    name: 'Paralegal',
     total: 3895,
     color: 'rgb(165,165,165)',
   },
   {
     id: '4',
-    name: 'Ortiz, Sarihana',
+    name: 'Discovery Project Manager',
     total: 12574.53,
     color: 'rgb(238,194,91)',
   },
   {
     id: '5',
-    name: 'Rivera, Daphne',
+    name: 'Legal Assistant',
     total: 3876,
     color: 'rgb(116,154,204)',
   },
   {
     id: '6',
-    name: 'Viera, Yarimel',
+    name: 'Librarian',
     total: 4009,
     color: 'rgb(135,170,96)',
   },
   {
     id: '7',
-    name: 'Alderman, Craig',
+    name: 'Staff Attorney',
     total: 21589.54,
-    color: 'red',
+    color: 'rgb(49,68,112)',
   },
 ];
 
@@ -58,17 +58,18 @@ const data = getData(mockDataSource);
 
 const option = {
   title : {
-    text: 'Timekeeper',
+    text: 'Timekeeper Classification Percentage',
     // subtext: '',
     x:'center'
   },
   tooltip : {
     // show: false,
     trigger: 'item',
-    formatter: '{b},<br/>${c}, {d}%'
+    formatter: '{b}<br/>${c}, {d}%'
   },
   legend: {
-    type: 'scroll',
+    // type: 'scroll',
+    type: 'plain',
     // orient: 'vertical',
     bottom: 150,
     data: data.legendData,
@@ -94,44 +95,12 @@ const option = {
           return params.data.color
         }
       },
-      /*label: {
-        // show: false,
-        normal: {
-          position: 'inside',
-          // backgroundColor: 'red',
-
-          formatter: [
-              '{name|{b}}',
-              '${value|{c}}, {percentage|{d}}%',
-          ].join('\n'),
-          color: '#fff',
-          rich: {
-              name: {
-                color: '#fff',
-                padding: [5, 0, 0, 0],
-                // align: 'left'
-              },
-              value: {
-                color: '#fff',
-              },
-              percentage: {
-                color: '#fff',
-
-              }
-          },
-        },
-      }, */
-      /* labelLine: {
-          normal: {
-              show: false
-          }
-      }, */
     },
   ],
 
 };
 
-const MatterPeople = ({ children }) => {
+const TimekeeperClassificationPercentage = ({ children }) => {
   return (
     <div>
       {children(option)}
@@ -139,13 +108,13 @@ const MatterPeople = ({ children }) => {
   )
 };
 
-MatterPeople.defaultProps = {
+TimekeeperClassificationPercentage.defaultProps = {
   data: []
 };
 
-MatterPeople.propTypes = {
+TimekeeperClassificationPercentage.propTypes = {
   data: PropTypes.array,
   render: PropTypes.func,
 };
 
-export default MatterPeople;
+export default TimekeeperClassificationPercentage;
