@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import ReactEcharts from 'echarts-for-react';
 import TimekeeperPercentage from './components/timekeeperPercentage';
 import TimekeeperPercentageV2 from './components/timekeeperPercentageV2';
-import TimekeeperClassificationPercentage from './components/timekeeperClassificationPercentage'
+import TimekeeperClassificationPercentage from './components/timekeeperClassificationPercentage';
+import CostsPerPhase from './components/costsPerPhase';
 // import './App.css';
 
 class App extends Component {
@@ -39,6 +40,20 @@ class App extends Component {
             />
           )}
         </TimekeeperClassificationPercentage>
+        <CostsPerPhase
+          renderBarChart={barChartOption => (
+            <ReactEcharts
+              option={barChartOption}
+              style={{ height: '700px', width: '100%' }}
+            />
+          )}
+          renderPieChart={pieChartOption => (
+            <ReactEcharts
+              option={pieChartOption}
+              style={{ height: '700px', width: '100%' }}
+            />
+          )}
+        />
       </div>
     );
   }
